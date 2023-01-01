@@ -33,7 +33,7 @@ def to_rss(name):
             #fe.description('Enjoy our first episode.')
             fe.enclosure(url, 0, 'audio/mpeg')
    # fg.rss_str(pretty=True)
-   fg.rss_file('podcast/podcast.xml', pretty=True)
+   fg.rss_file('docs/podcast.xml', pretty=True)
 
 
 if __name__ == '__main__':
