@@ -34,3 +34,5 @@ done
 sort  dates_and_mp3_urls.txt | uniq > temp; mv temp dates_and_mp3_urls.txt
 
 rm audio_player_urls.lst
+
+python main.py

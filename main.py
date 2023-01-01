@@ -15,11 +15,15 @@ def to_rss(name):
 
    with open("dates_and_mp3_urls.txt") as f:
         lines=f.readlines()
+        date_url=[]
         for l in lines:
             date_s, url=l.split(",")
             date_no_tz=datetime.strptime(date_s, "%d-%m-%Y" )
             timezone = pytz.timezone("Israel")
             date = timezone.localize(date_no_tz)
+            date_url.append((date,url))
+        date_url.sort()
+        for date,url in date_url:
             iso_date_s=datetime.strftime(date,  "%Y-%m-%d")
             fe = fg.add_entry()
             fe.id(url)
@@ -29,7 +33,7 @@ def to_rss(name):
             #fe.description('Enjoy our first episode.')
             fe.enclosure(url, 0, 'audio/mpeg')
    # fg.rss_str(pretty=True)
-   fg.rss_file('podcast.xml', pretty=True)
+   fg.rss_file('podcast/podcast.xml', pretty=True)
 
 
 if __name__ == '__main__':
