@@ -1,7 +1,7 @@
  
-set -x
+#set -x
 set -e
-set -u
+git set -u
 
 #rm dates_and_mp3_urls.txt | true
 #rm audio_player_urls.lst |true
