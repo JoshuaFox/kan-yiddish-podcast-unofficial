@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" ?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Kan Yiddish</title>
@@ -6,7 +6,7 @@
     <description>Kan Yiddish</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
-    <lastBuildDate>Sun, 01 Jan 2023 16:18:07 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jan 2023 19:32:22 +0000</lastBuildDate>
     <itunes:category text="Culture">
       <itunes:category text="Yiddish"/>
     </itunes:category>
@@ -14,49 +14,48 @@
       <title>Kan Yiddish 2022-12-16</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/681feadd-da47-4903-b7ec-af7b010e65ae/audio.mp3
 </guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/681feadd-da47-4903-b7ec-af7b010e65ae/audio.mp3&#10;" length="0" type="audio/mpeg"/>
-      <pubDate>Fri, 16 Dec 2022 00:00:00 +0200</pubDate>
-    </item>
-    <item>
-      <title>Kan Yiddish 2022-12-16</title>
-      <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/5dc75bef-1d68-4efb-b708-af6d014b7e58/audio.mp3
-</guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/5dc75bef-1d68-4efb-b708-af6d014b7e58/audio.mp3&#10;" length="0" type="audio/mpeg"/>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/681feadd-da47-4903-b7ec-af7b010e65ae/audio.mp3
+" length="0" type="audio/mpeg"/>
       <pubDate>Fri, 16 Dec 2022 00:00:00 +0200</pubDate>
     </item>
     <item>
       <title>Kan Yiddish 2022-12-09</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/b2ad79a4-6f69-49a4-b837-af660118a3bd/audio.mp3
 </guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/b2ad79a4-6f69-49a4-b837-af660118a3bd/audio.mp3&#10;" length="0" type="audio/mpeg"/>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/b2ad79a4-6f69-49a4-b837-af660118a3bd/audio.mp3
+" length="0" type="audio/mpeg"/>
       <pubDate>Fri, 09 Dec 2022 00:00:00 +0200</pubDate>
     </item>
     <item>
       <title>Kan Yiddish 2022-12-02</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/78e1f580-62e0-4498-a217-af5f0124f830/audio.mp3
 </guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/78e1f580-62e0-4498-a217-af5f0124f830/audio.mp3&#10;" length="0" type="audio/mpeg"/>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/78e1f580-62e0-4498-a217-af5f0124f830/audio.mp3
+" length="0" type="audio/mpeg"/>
       <pubDate>Fri, 02 Dec 2022 00:00:00 +0200</pubDate>
     </item>
     <item>
       <title>Kan Yiddish 2022-11-25</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/264a8d2d-9097-4f17-a1bb-af58011872c9/audio.mp3
 </guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/264a8d2d-9097-4f17-a1bb-af58011872c9/audio.mp3&#10;" length="0" type="audio/mpeg"/>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/264a8d2d-9097-4f17-a1bb-af58011872c9/audio.mp3
+" length="0" type="audio/mpeg"/>
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0200</pubDate>
     </item>
     <item>
       <title>Kan Yiddish 2022-10-21</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/c397ac88-11db-4445-abed-af350112eeb3/audio.mp3
 </guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/c397ac88-11db-4445-abed-af350112eeb3/audio.mp3&#10;" length="0" type="audio/mpeg"/>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/c397ac88-11db-4445-abed-af350112eeb3/audio.mp3
+" length="0" type="audio/mpeg"/>
       <pubDate>Fri, 21 Oct 2022 00:00:00 +0300</pubDate>
     </item>
     <item>
       <title>Kan Yiddish 2022-10-14</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/b9670a75-2d43-4536-9d97-af2e01233614/audio.mp3
 </guid>
-      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/b9670a75-2d43-4536-9d97-af2e01233614/audio.mp3&#10;" length="0" type="audio/mpeg"/>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/b9670a75-2d43-4536-9d97-af2e01233614/audio.mp3
+" length="0" type="audio/mpeg"/>
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0300</pubDate>
     </item>
   </channel>

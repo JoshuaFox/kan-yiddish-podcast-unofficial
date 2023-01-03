@@ -2,3 +2,4 @@ feedgen
 kleenexp
 pytz
 black
+requests
