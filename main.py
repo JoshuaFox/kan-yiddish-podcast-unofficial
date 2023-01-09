@@ -1,5 +1,8 @@
 from datetime import datetime
-import xml.dom.minidom
+
+from typing import Tuple, Iterable
+from xml.dom import minidom
+
 import pytz
 from feedgen.feed import FeedGenerator
 import requests
@@ -27,8 +30,10 @@ def download_data_for_rss():
         )
         return episode_matches
 
-    def extract_date_and_mp3_url_from_episode_page(date_orig, episode_url):
-        def extract_date(date_orig):
+    def extract_date_and_mp3_url_from_episode_page(
+        date_orig: str, episode_url: str
+    ) -> Tuple[str, str]:
+        def extract_date(date_orig: str) -> str:
 
             date_parts = date_orig.split("-")
             if len(date_parts) == 2:
@@ -51,6 +56,28 @@ def download_data_for_rss():
         assert len(match_mp3) == 1
         return date_s, match_mp3[0]
 
+    def existing_and_new_date_and_url_pairs(
+        date_and_mp3_urls: Iterable[Tuple[str, str]]
+    ):
+        try:
+            with open(dates_and_mp3_urls_file) as f:
+                existing_pairs_with_newline = [
+                    line.split(",") for line in f.readlines()
+                ]
+                existing_pairs = [
+                    (p[0], p[1].rstrip()) for p in existing_pairs_with_newline
+                ]
+        except FileNotFoundError:
+            existing_pairs = []
+
+        all_pairs = date_and_mp3_urls + existing_pairs
+
+        # Do not duplicate mp3s
+        mp3_to_date = {mp3: date for (mp3, date) in all_pairs}
+        ret = [(date, mp3) for date, mp3 in mp3_to_date.items()]
+
+        return sorted(ret)
+
     episode_matches = get_episodes_from_main_kanyiddish_page()
     date_and_mp3_urls = [
         extract_date_and_mp3_url_from_episode_page(
@@ -68,66 +95,48 @@ def download_data_for_rss():
         f_out.writelines(lines)
 
 
-def existing_and_new_date_and_url_pairs(date_and_mp3_urls):
-    try:
-        with open(dates_and_mp3_urls_file) as f:
-            existing_pairs_with_newline = [line.split(",") for line in f.readlines()]
-            existing_pairs = [
-                (p[0], p[1].rstrip()) for p in existing_pairs_with_newline
-            ]
-    except FileNotFoundError:
-        existing_pairs = []
-
-    all_pairs = date_and_mp3_urls + existing_pairs
-
-    # Do not duplicate mp3s
-    mp3_to_date = {mp3: date for (mp3, date) in all_pairs}
-    ret = [(date, mp3) for date, mp3 in mp3_to_date.items()]
-
-    return sorted(ret)
-
-
 def to_rss():
-    with open(dates_and_mp3_urls_file) as f:
-        fg = build_feed(f.readlines())
-        rss = fg.rss_str()
-        podcast_xml = xml.dom.minidom.parseString(rss).toprettyxml(
-            indent="  ",
-        )
+    def build_feed(lines):
+        def build_feed_gen():
+            fg = FeedGenerator()
+            fg.load_extension("podcast")
+            fg.title("Kan Yiddish")
+            fg.description("Kan Yiddish")
+            fg.link(
+                href="https://www.kan.org.il/radio/program.aspx/?progid=1136",
+                rel="alternate",
+            )
+            fg.podcast.itunes_category("Culture", "Yiddish")
+            return fg
 
-    with open("docs/podcast.xml", "w") as xml_out:
-        xml_out.write(podcast_xml)
+        def append_feed_item(date, url, fg):
+            fe = fg.add_entry()
+            fe.id(url)
+            fe.published(date)
+            fe.title("Kan Yiddish " + date.strftime("%Y-%m-%d"))
+            fe.enclosure(url, 0, "audio/mpeg")
 
+        def date_s_to_date(date_s):
+            return pytz.timezone("Israel").localize(
+                datetime.strptime(date_s, "%Y-%m-%d")
+            )
 
-def build_feed(lines):
-    def build_feed_gen():
-        fg = FeedGenerator()
-        fg.load_extension("podcast")
-        fg.title("Kan Yiddish")
-        fg.description("Kan Yiddish")
-        fg.link(
-            href="https://www.kan.org.il/radio/program.aspx/?progid=1136",
-            rel="alternate",
-        )
-        fg.podcast.itunes_category("Culture", "Yiddish")
+        assert sorted(lines) == lines
+
+        fg = build_feed_gen()
+        for line in lines:
+            assert line.count(",") == 1
+            date_s, url = line.split(",")
+            append_feed_item(date_s_to_date(date_s), url, fg)
         return fg
 
-    def append_feed_item(date, url, fg):
-        fe = fg.add_entry()
-        fe.id(url)
-        fe.published(date)
-        fe.title("Kan Yiddish " + date.strftime("%Y-%m-%d"))
-        fe.enclosure(url, 0, "audio/mpeg")
+    with open(dates_and_mp3_urls_file) as f:
+        fg = build_feed(f.readlines())
 
-    assert sorted(lines) == lines
-    fg = build_feed_gen()
-
-    for line in lines:
-        assert line.count(",") == 1, f"line was {line }"
-        date_s, url = line.split(",")
-        date = pytz.timezone("Israel").localize(datetime.strptime(date_s, "%Y-%m-%d"))
-        append_feed_item(date, url, fg)
-    return fg
+    with open("docs/podcast.xml", "w") as xml_out:
+        xml_out.write(minidom.parseString(fg.rss_str()).toprettyxml(
+            indent="  ",
+        ))
 
 
 if __name__ == "__main__":
