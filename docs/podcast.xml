@@ -6,10 +6,18 @@
     <description>Kan Yiddish</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
-    <lastBuildDate>Mon, 09 Jan 2023 12:56:41 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jan 2023 11:59:54 +0000</lastBuildDate>
     <itunes:category text="Culture">
       <itunes:category text="Yiddish"/>
     </itunes:category>
+    <item>
+      <title>Kan Yiddish 2023-01-13</title>
+      <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/737aaed6-57a7-4cdf-9d22-af89010d85bc/audio.mp3
+</guid>
+      <enclosure url="https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/737aaed6-57a7-4cdf-9d22-af89010d85bc/audio.mp3
+" length="0" type="audio/mpeg"/>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0200</pubDate>
+    </item>
     <item>
       <title>Kan Yiddish 2023-01-06</title>
       <guid isPermaLink="false">https://traffic.omny.fm/d/clips/23f697a0-7e6a-4e96-a223-a82c00962b12/0ac23a00-78bf-49c8-b052-a98a00c58400/5a476630-15b7-4ce3-ab2c-af8201206de4/audio.mp3
