@@ -6,7 +6,7 @@
     <description>Kan Yiddish</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
-    <lastBuildDate>Tue, 31 Jan 2023 11:45:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Feb 2023 20:28:06 +0000</lastBuildDate>
     <itunes:category text="Culture">
       <itunes:category text="Yiddish"/>
     </itunes:category>
